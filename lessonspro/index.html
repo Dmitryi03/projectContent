@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* затирание стандартных стилей браузера */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navigation {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            /* зафиксировали меню отступом в 20px */
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 80vw;
+
+            background-color: gray;
+            padding: 6px;
+            border-radius: 6px;
+
+            z-index: 9;
+        }
+
+        .navigation_item {
+            cursor: pointer;
+            border-bottom: 2px solid #000;
+            height: 100%;
+        }
+
+        .navigation_item_outlined {
+            border-radius: 12px;
+            border: 2px solid #000;
+            padding: 6px;
+        }
+
+        .container{
+            background: rgb(34, 193, 195);
+            background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+        }
+
+        body{
+            background-color: rgb(99, 99, 99);
+        }
+
+        .popup{
+            border: 2px solid black;
+            border-radius: 12px;
+
+            background-color:red;
+
+            min-width: 600px;
+            min-height: 400px;
+
+            max-width: 1100px;
+            max-height: 600px;
+
+            /* позиционировние */
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            /* центрирование контента */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /*  */
+        }
+
+        .popup__content{
+            border: 1px dashed black;
+            width: 80%;
+            min-height: 400px;
+            max-height: 600px;
+
+            /* центрирование текста */
+            text-align: center;
+        }
+
+        .popup__content-title{
+            font-size: 18px;
+            font-weight: bold;
+            margin: 40px 0;
+        }
+
+        .popup__content-subtitle{
+            font-size: 12px;
+            font-weight: lighter;
+
+        }
+
+        .popup-cross{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+        }
+
+        .popup-cross:hover{
+            color: chocolate;
+        }
+
+        .space{
+            height: 300vh;
+        }
+
+        .cards{
+            /* Прилипание */
+            position: sticky;
+            top: 80px;
+            
+            display: flex;
+            gap: 30px;
+        }
+
+        .cards__element{
+            border: 1px solid black;
+            width: 200px;
+            height: 400px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="navigation">
+
+            <div class="navigation__item navigation_item_outlined">
+                Меню
+            </div>
+            <div class="navigation__item">
+                О нас
+            </div>
+            <div class="navigation__item navigation_item_outlined">
+                Меню
+            </div>
+            <div class="navigation__item">
+                О нас
+            </div>
+            <div class="navigation__item navigation_item_outlined">
+                Меню
+            </div>
+            <div class="navigation__item">
+                О нас
+            </div>
+
+        </div>
+        
+        <!-- вспылавающее окно -->
+
+        <div class="popup">
+
+            <div class="popup__content">
+
+                <div class="popup__content-title">
+                    Добро пожаловать
+                </div>
+
+                <div class="popup__content-subtitle">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis aliquam asperiores, modi dolores
+                    tenetur totam praesentium laboriosam ipsa assumenda atque perferendis neque. Optio aperiam
+                    distinctio nemo hic blanditiis itaque iste.
+                </div>
+
+            </div>
+
+            <div class="popup-cross">
+                X
+            </div>
+
+        </div>
+
+        <div class="space">
+
+        </div>
+
+        <div class="cards">
+            <div class="cards">
+                <div class="cards__element">
+                    <div class="cards__element-title">1</div>
+                </div>
+                <div class="cards__element">
+                    <div class="cards__element-title">2</div>
+                </div>
+                <div class="cards__element">
+                    <div class="cards__element-title">3</div>
+                </div>
+                <div class="cards__element">
+                    <div class="cards__element-title">4</div>
+                </div>
+            </div>
+        </div>
+
+                <div class="space">
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
